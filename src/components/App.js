@@ -31,10 +31,11 @@ class App extends React.Component {
                 Total pics found: {this.state.images.length}
                 <div className="container">
                     <div className="row">
-
-                    <Image imageArray={this.state.images} />
-                        
-
+                        <div className="card-column">
+                            
+                                <Image imageArray={this.state.images} />
+                            
+                        </div>
                     </div>
                 </div>
             </div>

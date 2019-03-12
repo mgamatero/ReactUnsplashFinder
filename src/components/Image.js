@@ -2,10 +2,10 @@ import React from 'react'
 
 function Image(props){
 const individualImage = (props.imageArray).map((image) => {
-    return <img src={image.urls.regular} key={image.id} alt={image.description}></img>
+    return <img  className="col-4" src={image.urls.regular} key={image.id} alt={image.description}></img>
 })
 
-    return(<div className="col">{individualImage}</div>)
+    return(<div>{individualImage}</div>)
 }
 
 export default Image;
