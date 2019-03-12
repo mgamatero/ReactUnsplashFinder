@@ -13,7 +13,7 @@ class App extends React.Component {
 
     handleSearchBarInput = async (term) => {
         // console.log("From App: " + term)
-        var response = await axios.get('https://api.unsplash.com/search/photos/', {
+        var response = await axios.get('https://api.unsplash.com/search/photos/?per_page=24', {
             params: { query: term },
             headers:
             {
@@ -28,7 +28,7 @@ class App extends React.Component {
         return (
             <div className="container">
                 <SearchBar onSubmitBackToApp={this.handleSearchBarInput} />
-                Total pics found: {this.state.images.length}
+                <div className="text-white">Total pics found: {this.state.images.length}</div>
                 <div className="container">
                     <div className="row">
                         <div className="card-column">
